@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -44,6 +45,14 @@ public class Program {
 		for (Seller obj : list) {
 			System.out.println(obj);
 		}
+		
+		
+		System.out.println("\n === TEST 4: seller insert===");
+		
+		Seller newSeller = new Seller(null,"Greg", "greg@gmail.com", new Date(),3400.00, department);
+		sellerDao.insert(newSeller);
+		
+		System.out.println("INserted! new ID = " + newSeller.getId());
 	}
 }
 	
